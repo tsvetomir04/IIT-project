@@ -1,4 +1,4 @@
-# IIT-project
+# Space Art Entertainment
 
 ## 1. Концепция на бранда
 
