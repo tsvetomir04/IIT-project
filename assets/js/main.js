@@ -431,4 +431,36 @@ function handleSignIn(event) {
   }, 800);
 }
 
+// CAREER FORM
+document.getElementById('careerForm')?.addEventListener('submit', function(e) {
+  e.preventDefault();
 
+  const success = document.getElementById('careerSuccess');
+  success.classList.remove('hidden');
+
+  setTimeout(() => {
+    success.classList.add('hidden');
+    this.reset();
+  }, 2000);
+});
+
+
+
+
+const card = document.getElementById("card");
+const btn = document.getElementById("animateBtn");
+
+btn.addEventListener("click", () => {
+    card.animate(
+        [
+            { transform: "translateX(0)", opacity: 1 },
+            { transform: "translateX(250px)", opacity: 0.5 },
+            { transform: "translateX(0)", opacity: 1 }
+        ],
+        {
+            duration: 1500,
+            easing: "ease-in-out",
+            iterations: 1
+        }
+    );
+});
