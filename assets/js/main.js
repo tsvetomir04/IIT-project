@@ -195,8 +195,27 @@ function closeModal(id) {
 const openLauncherModal = () => openModal('launcherModal');
 const closeLauncherModal = () => closeModal('launcherModal');
 
-const openVideoModal = () => openModal('videoModal');
-const closeVideoModal = () => closeModal('videoModal');
+function openVideoModal(url) {
+  const modal = document.getElementById("videoModal");
+  const frame = document.getElementById("videoFrame");
+
+  frame.src = url;
+
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+}
+
+const closeVideoModal = () => {
+  const modal = document.getElementById('videoModal');
+  const frame = document.getElementById('trailerFrame');
+
+  modal?.classList.add('hidden');
+  modal?.classList.remove('flex');
+  document.body.style.overflow = '';
+
+  // stop video
+  if (frame) frame.src = "";
+};
 
 const closeGalleryModal = () => closeModal('galleryModal');
 
